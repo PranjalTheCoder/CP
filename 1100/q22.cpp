@@ -15,40 +15,18 @@
 #define fox for(int i=0; i<n; i++)
 #define pb push_back
 #define ll long long 
+#define debug(a) for(int i=0; i<(int)a.size(); i++){cout << a[i] << " ";} cout << endl;
 using namespace std;
+const int mod = 1e9+7;
 
 void solve(){
-    int n;
+    ll n;
     cin >> n;
-    vi arr(n);
-    inp(arr);
-    vi brr=arr;
-    vi nums;
-    sort(all(brr));
-    // for(auto it: brr){
-    //     cout << it << " ";
-    // }
-    // cout << endl << endl;
-    // int maxi = INT_MAX;
-    int count = 0;
-    fox{
-        if(arr[i]!=brr[i]){
-             nums.pb(brr[i]);
-        }
-    }
-    // for(auto it: nums){
-    //     cout << it << " ";
-    // }
-    // cout << endl << endl;
-    // cout << "size is: " << nums.size() << endl;
-    if(nums.size()>0){
-        count=nums[0];
-    }
-    // cout << "x is :" << count << endl;
-    for(int i=1; i<nums.size(); i++){
-        count=count&nums[i];
-    }
-    cout << count << endl;
+    ll count = n*(n+1)%mod;
+    ll cnt = ((4*n-1)*2022/6)%mod;
+    ll ct = (count*cnt)%mod;
+    cout << ct << endl;
+    
 }
     
  
