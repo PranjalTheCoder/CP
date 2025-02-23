@@ -33,30 +33,18 @@ void solve(){
             st.insert(arr[i]);
         }
     }
-    // for(auto it: brr){
-    //     cout << it.first << "," << it.second << " ";
-    // }
-    // cout << endl;
-    // int count = -1;
     bool f1=false;
     int maxi = INT_MIN;
-    // cout << "brr is: ";
-    // for(auto it : brr){
-    //     cout << it.first << "," << it.second << " ";
-    // }
-    // cout << endl;
     for(int i=0; i<brr.size(); i++){
         int ai=brr[i].first;
         for(int j=i; j<brr.size(); j++){
             int bi=brr[j].first;
             if(__gcd(ai, bi)==1){
                 int count=brr[i].second+brr[j].second+2;
-                // cout << count << " ";
                 maxi=max(maxi, count);
             }
         }
     }
-    // cout << endl;
     if(maxi==INT_MIN)
         cout << -1 << endl;
     else
