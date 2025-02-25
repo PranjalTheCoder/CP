@@ -26,6 +26,7 @@ void solve(){
     ll cnt = ((4*n-1)*2022/6)%mod;
     ll ct = (count*cnt)%mod;
     cout << ct << endl;
+    // oenrvojenbonetob
     
 }
     
